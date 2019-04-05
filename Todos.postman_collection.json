@@ -40,7 +40,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/v1/todos/2",
+					"raw": "http://localhost:5000/api/v1/todos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
