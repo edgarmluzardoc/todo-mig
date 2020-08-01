@@ -17,7 +17,7 @@ app.get('/api/v1/todos', (req, res) => {
     res.status(200).send({
         success: 'true',
         message: 'todos retrieved successfully',
-        todos: db
+        data: db
     })
 });
 
@@ -29,7 +29,7 @@ app.get('/api/v1/todos/:id', (req, res) => {
             return res.status(200).send({
                 success: 'true',
                 message: 'todo retrieved successfully',
-                todo,
+                data: todo,
             });
         } 
     });
@@ -62,7 +62,7 @@ app.post('/api/v1/todos', (req, res) => {
     return res.status(201).send({
         success: 'true',
         message: 'todo added successfully',
-        todo
+        data: todo
     })
 });
 
@@ -71,6 +71,7 @@ app.put('/api/v1/todos/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     let todoFound;
     let itemIndex;
+
     db.map((todo, index) => {
         if (todo.id === id) {
             todoFound = todo;
@@ -108,7 +109,7 @@ app.put('/api/v1/todos/:id', (req, res) => {
     return res.status(201).send({
         success: 'true',
         message: 'todo added successfully',
-        updatedTodo,
+        data: updatedTodo,
     });
 });
 

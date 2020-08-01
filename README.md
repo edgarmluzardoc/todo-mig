@@ -1,5 +1,5 @@
 # todo-mig
-Example API for "todos" using node js
+Example API for "todos" using node js. No database installed yet, running local variables as an example.
 
 ## How to run
 Run the following commands inside this repo:
